@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preset voxel_size="10">
+	<models>
+		<model name="empty" path="" />
+		<model name="balcony" path="models/balcony.obj" />
+		<model name="roof" path="models/roof.obj" />
+		<model name="window_center" path="models/window_center.obj" />
+		<model name="wall_center" path="models/wall_center.obj" />
+		<model name="wall_corner" path="models/wall_corner.obj" />
+	</models>
+	<neighbours>
+		<model name="empty">
+			<neighbour name="empty" axis="Left" />
+			<neighbour name="empty" axis="Right" />
+			<neighbour name="empty" axis="Front" />
+			<neighbour name="empty" axis="Back" />
+			<neighbour name="empty" axis="Top" />
+			<neighbour name="empty" axis="Bottom" />
+		</model>
+		<model name="balcony">
+			<neighbour name="window_center" axis="Left" />
+			<neighbour name="window_center" axis="Right" />
+			<neighbour name="wall_center" axis="Left" />
+			<neighbour name="wall_center" axis="Right" />
+			<neighbour name="empty" axis="Front" />
+			<neighbour name="empty" axis="Back" />
+			<neighbour name="empty" axis="Top" />
+			<neighbour name="empty" axis="Bottom" />
+		</model>
+		<model name="window_center">
+			<neighbour name="wall_center" axis="Left" />
+			<neighbour name="wall_center" axis="Right" />
+			<neighbour name="balcony" axis="Left" />
+			<neighbour name="balcony" axis="Right" />
+			<neighbour name="empty" axis="Front" />
+			<neighbour name="empty" axis="Back" />
+			<neighbour name="empty" axis="Top" />
+			<neighbour name="empty" axis="Bottom" />
+		</model>
+		<model name="wall_center">
+			<neighbour name="window_center" axis="Left" />
+			<neighbour name="window_center" axis="Right" />
+			<neighbour name="balcony" axis="Left" />
+			<neighbour name="balcony" axis="Right" />
+			<neighbour name="empty" axis="Front" />
+			<neighbour name="empty" axis="Back" />
+			<neighbour name="empty" axis="Top" />
+			<neighbour name="empty" axis="Bottom" />
+		</model>
+	</neighbours>
+</preset>
